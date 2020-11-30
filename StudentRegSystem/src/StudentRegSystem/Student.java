@@ -1,3 +1,4 @@
+package StudentRegSystem;
 
 
 import java.util.ArrayList;
@@ -83,5 +84,30 @@ public class Student {
         this.courseProg = courseProg;
     }
     
+    public List<Module> getModules(){
+		return currentMods;
+	}
+
+	public void setModules(List<Module> currentMods){
+		this.currentMods = currentMods;
+	}
+	
+	public String getModuleString(){
+	    StringBuilder moduleSB = new StringBuilder();
+	        
+	        for(Module module : currentMods){
+	            moduleSB.append(module.getName());
+	            moduleSB.append(" ");
+	        }
+	        
+	    String moduleString = moduleSB.toString();
+	    return moduleString;
+	}
+	
+	 @Override
+	 public String toString(){
+	    return "Name: " + name + " | Username: " + this.getUsername() + " | DOB: " + DOB + " | Age: " + age + " | ID: " + id +
+	                " | Course: " + courseProg.getCourseName() + " | Modules: " + this.getModuleString();
+	    }
     
 }

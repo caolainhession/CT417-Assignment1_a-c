@@ -1,3 +1,4 @@
+package StudentRegSystem;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +8,8 @@ public class Module {
     private List<Student> students;
     private List<CourseProgramme> courses;
     
-    public Module(String id, String name, ArrayList students) {
-            this.id=id;
+    public Module(String id, String name) {
+            this.id = id;
             this.name = name;
             this.students = new ArrayList<Student>();
             this.courses = new ArrayList<CourseProgramme>();
