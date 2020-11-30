@@ -43,7 +43,7 @@ public class StudentTest {
 //		CourseProgramme currentCourse = s.getCourseProgramme();
 //		assertEquals(expectedCourse, currentCourse);
 //	}
-//
+
 //	@Test
 //	public void test_addingModules(){
 //		s.addModule(m1);
