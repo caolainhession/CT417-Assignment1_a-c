@@ -1,4 +1,4 @@
-package StudentRegSystem;
+package CIPipeline;
 
 
 import java.util.ArrayList;
@@ -104,6 +104,7 @@ public class Student {
 	    return moduleString;
 	}
 	
+
 	 @Override
 	 public String toString(){
 	    return "Name: " + name + " | Username: " + this.getUsername() + " | DOB: " + DOB + " | Age: " + age + " | ID: " + id +

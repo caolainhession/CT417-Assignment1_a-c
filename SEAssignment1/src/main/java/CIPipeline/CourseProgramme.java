@@ -1,4 +1,5 @@
-package StudentRegSystem;
+package CIPipeline;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.joda.time.DateTime;
@@ -88,5 +89,24 @@ public class CourseProgramme {
 	this.studentList = studentList;
     }
     
+
+    public String getModuleListString(){
+        StringBuilder moduleStringSB = new StringBuilder();
+
+        for(Module module : modulesList){
+            moduleStringSB.append(module.getName());
+            moduleStringSB.append(" ");
+        }
+        
+        String moduleString = moduleStringSB.toString();
+        return moduleString;
+    }
+    
+    @Override
+    public String toString(){
+        return "Course Name: " + courseName + " | Start Date: " 
+    + startDate + " | End Date: " + endDate + " | Students Enrolled: " 
+    + this.getStudentList() + " | Course Modules: " + this.getModulesList();
+    }
     
 }

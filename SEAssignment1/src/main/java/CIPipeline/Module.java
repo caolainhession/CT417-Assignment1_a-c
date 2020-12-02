@@ -1,4 +1,5 @@
-package StudentRegSystem;
+package CIPipeline;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,6 +48,8 @@ public class Module {
         this.courses = courses;
     }
     
+    
+    
     public void addStudentModule(Student student){
 	if (!students.contains(student)){
 		students.add(student);
@@ -72,6 +75,31 @@ public class Module {
 		courses.remove(programme);
 		programme.removeModuleCourse(this);
 	}
+    }
+    
+    
+    public String getStudentsString() {
+		StringBuilder sbSL = new StringBuilder();
+		for (Student s : students) {
+			sbSL.append(s.getUsername());
+		}
+		String str = sbSL.toString();
+		return str;
+	}
+    
+	public String getCoursesString(){
+		StringBuilder sbCL = new StringBuilder();
+		for (CourseProgramme cp : courses){
+			sbCL.append(cp.getCourseName());
+		}
+		String str = sbCL.toString();
+		return str;
+	}
+    
+    @Override
+    public String toString(){
+        return "Name: " + name + " | ID: " + id + " | Students Enrolled: " + this.getStudentList()
+        + " | Courses Associated: " + this.getCourseList();
     }
 
 }
